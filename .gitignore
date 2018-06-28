@@ -3,6 +3,7 @@
 # R-specific things
 .Rproj.user/
 .Rhistory
+.Rproj.user
 
 # Script outputs
 outputs/
