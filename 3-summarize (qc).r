@@ -1,11 +1,11 @@
-# Process Picarro data for 3soils lab experiment
+# Process Picarro data for Beaver Creek test experiment
 # This workhorse script summarizes individual (raw) Picarro observations to 
 # summaries of "samples" (groups of consecutive observations made from a given 
 # core at a point in time). It computes gas concentration changes, performs 
 # some QC, merges the Picarro data with valve map and other ancillary data,
 # and writes SUMMARYDATA_FILE.
 # 
-# Ben Bond-Lamberty November 2017
+# Ben Bond-Lamberty and Aditi Sengupta June 2018
 
 source("0-functions.R")
 
