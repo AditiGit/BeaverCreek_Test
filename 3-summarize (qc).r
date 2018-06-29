@@ -107,14 +107,19 @@ rawdata_samples_trunc %>%
 qc1 <- qplot(DATETIME, slope, data = summarised_data, geom = "line") + 
   facet_wrap(~Sample, scales = "free") +
   theme(axis.text.x = element_text(size = 6))
-save_plot("qc1-slopes", qc1)
+print(qc1)
+save_plot("qc1-slopes")
 qc2 <- qplot(DATETIME, r2, data = summarised_data, geom = "line") + 
   facet_wrap(~Sample, scales = "free") +
   theme(axis.text.x = element_text(size = 6))
-save_plot("qc1-r2", qc2)
+print(qc2)
+save_plot("qc1-r2")
+qc3 <- qplot(slope, r2, data = summarised_data, color = Sample)  + xlim(c(0, 250))
+print(qc3)
+save_plot("qc3-slope_r2")
 
 
-save_data(summarised_data)
+save_data(summarised_data, scriptfolder = FALSE)
 
 printlog("All done.")
 closelog()
