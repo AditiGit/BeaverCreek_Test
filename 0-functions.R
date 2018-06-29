@@ -22,8 +22,9 @@ library(tidyr)
 # Parameters for key analytical choices
 # Defined here so they can be easily used in code AND manuscript
 MAX_MEASUREMENT_TIME <- 120 # anything longer than this is an ambient sample
-MAX_MINCONC_TIME <- 10     # the minimum concentration has to occur in first 10 s
-MAX_MAXCONC_TIME <- 45     # the maximum concentration has to occur in first 45 s
+MIN_FLUXCALC_TIME <- 5     # the minimum concentration has to occur in first 10 s
+MAX_FLUXCALC_TIME <- 60     # the maximum concentration has to occur in first 45 s
+
 OUTLIER_GROUPS   <- 10     # Divide data into date groups and identify outliers in each
 CO2_EXCLUDE_DEVS <- 5.0    # CO2 outlier boundary, in mean absolute deviations
 CH4_EXCLUDE_DEVS <- 10.0   # CH4 outlier boundary, in mean absolute deviations
